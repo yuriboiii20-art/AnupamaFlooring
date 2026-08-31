@@ -59,6 +59,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Fix Scroll Margin for Sticky Navbar */
+section[id] {
+  scroll-margin-top: 95px;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -98,7 +103,7 @@ button, input, select, textarea {
 
 .pxl-heading-subtitle {
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--pxl-primary);
   text-transform: uppercase;
@@ -132,7 +137,7 @@ button, input, select, textarea {
   justify-content: center;
   gap: 10px;
   height: 52px;
-  padding: 0 36px;
+  padding: 0 34px;
   font-size: 15px;
   font-weight: 600;
   border-radius: 9999px;
@@ -185,6 +190,8 @@ button, input, select, textarea {
   font-size: 13px;
   padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1001;
 }
 
 .topbar-content {
@@ -216,7 +223,7 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   MAIN NAVBAR (Exact FarmDung Layout)
+   MAIN NAVBAR (Fixed & Sticky with Exact Layout)
    ========================================================================== */
 .header-main {
   background-color: var(--pxl-white);
@@ -224,13 +231,14 @@ button, input, select, textarea {
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: var(--transition);
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 90px;
+  height: 88px;
 }
 
 /* Logo */
@@ -251,6 +259,7 @@ button, input, select, textarea {
   justify-content: center;
   color: var(--pxl-white);
   box-shadow: 0 4px 10px rgba(75, 133, 69, 0.25);
+  flex-shrink: 0;
 }
 
 .logo-text-group {
@@ -260,7 +269,7 @@ button, input, select, textarea {
 
 .logo-brand-title {
   font-family: var(--font-heading);
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 800;
   color: var(--pxl-dark-green);
   line-height: 1.1;
@@ -272,14 +281,14 @@ button, input, select, textarea {
   color: var(--pxl-primary);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 /* Nav Menu */
 .main-nav-menu {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 30px;
 }
 
 .main-nav-link {
@@ -287,9 +296,10 @@ button, input, select, textarea {
   font-size: 15px;
   font-weight: 600;
   color: var(--pxl-text-dark);
-  padding: 8px 0;
+  padding: 10px 0;
   position: relative;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .main-nav-link:hover, .main-nav-link.active {
@@ -302,8 +312,9 @@ button, input, select, textarea {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background: var(--pxl-primary);
+  border-radius: 2px;
   transition: var(--transition);
 }
 
@@ -322,7 +333,7 @@ button, input, select, textarea {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px;
+  padding: 8px;
   color: var(--pxl-dark-green);
 }
 
@@ -331,7 +342,7 @@ button, input, select, textarea {
    ========================================================================== */
 .hero-slider-section {
   position: relative;
-  min-height: 600px;
+  min-height: 580px;
   background-color: var(--pxl-dark-green);
   overflow: hidden;
 }
@@ -339,7 +350,7 @@ button, input, select, textarea {
 .hero-slider-container {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 580px;
 }
 
 .hero-slide-item {
@@ -363,7 +374,7 @@ button, input, select, textarea {
   inset: 0;
   background-size: cover;
   background-position: center;
-  transform: scale(1.05);
+  transform: scale(1.04);
   transition: transform 6s ease;
 }
 
@@ -520,7 +531,7 @@ button, input, select, textarea {
    ABOUT US SECTION (Exact FarmDung Layout with Yellow Badge & Image Mosaic)
    ========================================================================== */
 .section-about {
-  padding: 50px 0 90px 0;
+  padding: 40px 0 80px 0;
   background-color: var(--pxl-white);
 }
 
@@ -547,14 +558,14 @@ button, input, select, textarea {
   object-fit: cover;
 }
 
-/* Floating Award Box (Exact FarmDung #FEEECD #4A391B box) */
+/* Floating Award Box */
 .about-award-box {
   position: absolute;
   bottom: -30px;
   left: 20px;
   background-color: var(--pxl-yellow-light);
   border-radius: 12px;
-  padding: 30px 32px;
+  padding: 28px 30px;
   max-width: 440px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border: 1px solid #F5E2B5;
@@ -562,7 +573,7 @@ button, input, select, textarea {
 
 .award-box-num {
   font-family: var(--font-heading);
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 800;
   color: var(--pxl-text-dark);
   line-height: 1;
@@ -604,11 +615,113 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   FOUNDER & LEADERSHIP SPOTLIGHT (Bhavna Aggarwal)
+   ========================================================================== */
+.section-founder {
+  padding: 80px 0;
+  background-color: #F8FAF7;
+  border-top: 1px solid var(--pxl-border);
+  border-bottom: 1px solid var(--pxl-border);
+}
+
+.founder-card-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 48px;
+  background: var(--pxl-white);
+  border-radius: 16px;
+  padding: 44px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--pxl-border);
+  align-items: center;
+}
+
+.founder-photo-col {
+  position: relative;
+  text-align: center;
+}
+
+.founder-img-frame {
+  width: 100%;
+  max-width: 300px;
+  height: 380px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 4px solid var(--pxl-white);
+  margin: 0 auto;
+}
+
+.founder-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.founder-badge-exp {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--pxl-yellow-badge);
+  color: var(--pxl-dark-green);
+  padding: 6px 18px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.founder-name-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--pxl-dark-green);
+  margin-bottom: 4px;
+}
+
+.founder-role-tag {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--pxl-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.founder-bio-text {
+  font-size: 15px;
+  color: var(--pxl-text-body);
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.founder-portfolio-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.founder-pill-tag {
+  background: rgba(75, 133, 69, 0.1);
+  color: var(--pxl-dark-green);
+  border: 1px solid rgba(75, 133, 69, 0.25);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==========================================================================
    WHY CHOOSE US (Exact FarmDung Staggered Images + 4 Feature Cards)
    ========================================================================== */
 .section-why-choose-us {
   padding: 90px 0;
-  background-color: var(--pxl-bg-light);
+  background-color: var(--pxl-white);
 }
 
 .why-row-container {
@@ -669,7 +782,7 @@ button, input, select, textarea {
 }
 
 .pxl-icon-box-item {
-  background: var(--pxl-white);
+  background: var(--pxl-bg-light);
   padding: 24px 20px;
   border-radius: 10px;
   border: 1px solid var(--pxl-border);
@@ -680,6 +793,7 @@ button, input, select, textarea {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
   border-color: var(--pxl-primary);
+  background: var(--pxl-white);
 }
 
 .pxl-icon-box-icon {
@@ -707,7 +821,7 @@ button, input, select, textarea {
    ========================================================================== */
 .section-products {
   padding: 90px 0;
-  background-color: var(--pxl-white);
+  background-color: var(--pxl-bg-light);
 }
 
 .products-grid-layout {
@@ -858,7 +972,7 @@ button, input, select, textarea {
    ========================================================================== */
 .section-gallery {
   padding: 90px 0;
-  background-color: var(--pxl-bg-light);
+  background-color: var(--pxl-white);
 }
 
 .gallery-mosaic-grid {
@@ -915,7 +1029,7 @@ button, input, select, textarea {
    ========================================================================== */
 .section-contact {
   padding: 90px 0;
-  background-color: var(--pxl-white);
+  background-color: var(--pxl-bg-light);
 }
 
 .contact-split-grid {
@@ -1174,7 +1288,7 @@ button, input, select, textarea {
   .counter-boxes-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .about-row-container, .why-row-container, .contact-split-grid {
+  .about-row-container, .why-row-container, .contact-split-grid, .founder-card-layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }

@@ -10,25 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-/* Navbar */
+/* Navbar with Smooth Scroll & Active Spy */
 function initNavbar() {
   const header = document.querySelector('.header-main');
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
   const navLinks = document.querySelectorAll('.main-nav-link');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-    updateActiveNavLink();
-  });
-
+  // Handle mobile menu
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       navMenu.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navMenu.classList.remove('open');
+      }
     });
 
     navLinks.forEach(link => {
@@ -38,24 +37,58 @@ function initNavbar() {
     });
   }
 
+  // Header scroll shadow and active spy
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    updateActiveNavLink();
+  });
+
   function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
-    const scrollY = window.pageYOffset + 120;
+    const scrollPosition = window.scrollY + 120;
 
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop;
-      const sectionId = current.getAttribute('id');
-      const targetNavLink = document.querySelector(`.main-nav-link[href*="${sectionId}"]`);
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      const id = sec.getAttribute('id');
+      
+      // If we are scrolling in company-profile or founder, keep company-profile active
+      const targetId = (id === 'founder') ? 'company-profile' : id;
+      const matchingLink = document.querySelector(`.main-nav-link[href="#${targetId}"]`);
 
-      if (targetNavLink) {
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          navLinks.forEach(l => l.classList.remove('active'));
-          targetNavLink.classList.add('active');
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        if (matchingLink) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          matchingLink.classList.add('active');
         }
       }
     });
   }
+
+  // Smooth click scroll
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (targetId && targetId.startsWith('#')) {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          const headerHeight = header.offsetHeight || 88;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight + 5;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      }
+    });
+  });
 }
 
 /* Hero Slider */
