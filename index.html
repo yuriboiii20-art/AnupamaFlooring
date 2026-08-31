@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anupama Flooring | India’s Trusted Flooring Exporter | Hardwood, SPC Vinyl &amp; Vitrified Tiles Worldwide Shipping</title>
-  <meta name="description" content="Anupama Flooring is India’s trusted exporter and manufacturer of premium natural hardwood, waterproof SPC vinyl, glazed vitrified tiles, and outdoor teak decking. Bulk orders & worldwide delivery." />
+  <title>Anupama Flooring | India’s Trusted Flooring Exporter | Hardwood, SPC Vinyl &amp; Vitrified Tiles</title>
+  <meta name="description" content="Anupama Flooring is India’s trusted exporter and manufacturer of premium natural hardwood, waterproof SPC vinyl, glazed vitrified tiles, and outdoor teak decking." />
   
   <!-- Open Graph Meta -->
   <meta property="og:type" content="website" />
@@ -19,8 +19,11 @@
 </head>
 <body>
 
+  <!-- Mobile Backdrop Overlay -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
   <!-- ==========================================================================
-       1. TOP BAR (Exact FarmDung Header Style)
+       1. TOP BAR
        ========================================================================== -->
   <div class="topbar">
     <div class="container topbar-content">
@@ -47,15 +50,15 @@
   </div>
 
   <!-- ==========================================================================
-       2. MAIN NAVBAR (Fixed, Responsive, and Smoothly Linked)
+       2. MAIN NAVBAR
        ========================================================================== -->
   <header class="header-main">
     <div class="container navbar-container">
       
       <!-- Brand Logo -->
-      <a href="#home" class="site-logo">
+      <a href="index.html" class="site-logo">
         <div class="logo-badge-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
             <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
             <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
@@ -68,22 +71,22 @@
         </div>
       </a>
 
-      <!-- Navbar Options (Exact user required list) -->
+      <!-- Navbar Options Linking to Separate Pages -->
       <nav class="main-nav-menu" id="navMenu">
-        <a href="#home" class="main-nav-link active">Home</a>
-        <a href="#company-profile" class="main-nav-link">Company Profile</a>
-        <a href="#products" class="main-nav-link">Products</a>
-        <a href="#why-choose-us" class="main-nav-link">Why Choose us</a>
-        <a href="#gallery" class="main-nav-link">Gallery</a>
-        <a href="#contact-us" class="main-nav-link">Contact Us</a>
+        <div class="mobile-drawer-header">
+          <div class="drawer-logo-title">Anupama Flooring</div>
+          <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+        </div>
+        <a href="index.html" class="main-nav-link active"><span class="nav-link-text">Home</span></a>
+        <a href="company-profile.html" class="main-nav-link"><span class="nav-link-text">Company Profile</span></a>
+        <a href="products.html" class="main-nav-link"><span class="nav-link-text">Products</span></a>
+        <a href="why-choose-us.html" class="main-nav-link"><span class="nav-link-text">Why Choose us</span></a>
+        <a href="gallery.html" class="main-nav-link"><span class="nav-link-text">Gallery</span></a>
+        <a href="contact-us.html" class="main-nav-link"><span class="nav-link-text">Contact Us</span></a>
       </nav>
 
-      <!-- CTA Button & Mobile Menu Toggle -->
+      <!-- Mobile Menu Toggle -->
       <div class="header-cta-group">
-        <button class="pxl-button pxl-btn-primary open-quote-modal">
-          <span>Inquire Now</span>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </button>
         <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle navigation">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
@@ -93,49 +96,92 @@
   </header>
 
   <!-- ==========================================================================
-       3. HERO SLIDER (Exact FarmDung PXL Slider Layout)
+       3. HERO SLIDER (Pure, Clean & 1-Second Auto-Transition)
        ========================================================================== -->
   <section class="hero-slider-section" id="home">
     <div class="hero-slider-container">
       
-      <!-- Slide 1 -->
+      <!-- Slide 1: Bulk Stacks -->
       <div class="hero-slide-item active">
-        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-slide-bg" style="background-image: url('images/product-bulk-stacks.jpg');"></div>
         <div class="hero-slide-overlay"></div>
         <div class="container">
           <div class="hero-slide-content">
-            <span class="slide-badge-tag">India's No.1 Flooring Exporter</span>
+            <span class="slide-badge-tag">India's Trusted Exporter &bull; Bulk Capacity</span>
             <h1 class="slide-heading-title">
-              Premium Hardwood, <span>SPC Vinyl</span> &amp; Vitrified Tiles Worldwide Shipping
+              100% Organic, Natural &amp; <span>Sustainable Products</span> Worldwide
             </h1>
             <p class="slide-description-text">
-              Anupama Flooring, a unit of ABHI Elite Group Pvt Ltd, is India’s trusted exporter of organic engineered teak, 100% waterproof SPC rigid floors, and luxury glazed vitrified tiles for global projects.
+              Anupama Flooring, a unit of ABHI Elite Group Pvt Ltd, exports premium certified organic compressed products, crafted under strict quality standards for worldwide markets.
             </p>
-            <div class="slide-buttons-group">
-              <a href="#products" class="pxl-button pxl-btn-primary">Discover More</a>
-              <button class="pxl-button pxl-btn-outline-white open-quote-modal">Get a Quote</button>
-            </div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 2 -->
+      <!-- Slide 2: Carton Packaging -->
       <div class="hero-slide-item">
-        <div class="hero-slide-bg" style="background-image: url('https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-slide-bg" style="background-image: url('images/product-box-pack.jpg');"></div>
         <div class="hero-slide-overlay"></div>
         <div class="container">
           <div class="hero-slide-content">
-            <span class="slide-badge-tag">100% Eco-Friendly &bull; Precision Milled</span>
+            <span class="slide-badge-tag">Export Moisture-Barrier Packaging</span>
             <h2 class="slide-heading-title">
-              Delivering <span>Quality, Reliability</span> &amp; Global Trust Worldwide
+              Standardized <span>Carton Packaged</span> for Global Oceanic Freight
             </h2>
             <p class="slide-description-text">
-              We stand apart through our commitment to certified wood sourcing, German micro-bevel click locks, and export-grade moisture barrier packaging.
+              Carefully packed in high-durability corrugated export boxes with moisture control to ensure flawless condition upon arrival at international ports.
             </p>
-            <div class="slide-buttons-group">
-              <a href="#why-choose-us" class="pxl-button pxl-btn-secondary">Why Choose Us</a>
-              <a href="#contact-us" class="pxl-button pxl-btn-outline-white">Contact Us</a>
-            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Diameter Precision Spec -->
+      <div class="hero-slide-item">
+        <div class="hero-slide-bg" style="background-image: url('images/product-diameter-spec.jpg');"></div>
+        <div class="hero-slide-overlay"></div>
+        <div class="container">
+          <div class="hero-slide-content">
+            <span class="slide-badge-tag">Precision Calibration &bull; Quality Testing</span>
+            <h2 class="slide-heading-title">
+              Calibrated <span>4-Inch Diameter</span> Uniform Dimensions
+            </h2>
+            <p class="slide-description-text">
+              Precision-milled and molded to exact international dimensions for uniform burn, optimal density, and reliable consistency across every batch.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Batch Grid Array -->
+      <div class="hero-slide-item">
+        <div class="hero-slide-bg" style="background-image: url('images/product-grid-array.jpg');"></div>
+        <div class="hero-slide-overlay"></div>
+        <div class="container">
+          <div class="hero-slide-content">
+            <span class="slide-badge-tag">100% Quality Assured &bull; Zero Contaminants</span>
+            <h2 class="slide-heading-title">
+              Delivering <span>Reliability &amp; Trust</span> to 48+ Export Countries
+            </h2>
+            <p class="slide-description-text">
+              Every unit is thoroughly inspected for zero foreign matter, consistent thickness, and chemical-free purity.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Thickness Spec -->
+      <div class="hero-slide-item">
+        <div class="hero-slide-bg" style="background-image: url('images/product-thickness-spec.jpg');"></div>
+        <div class="hero-slide-overlay"></div>
+        <div class="container">
+          <div class="hero-slide-content">
+            <span class="slide-badge-tag">High-Density Compression</span>
+            <h2 class="slide-heading-title">
+              Calibrated <span>Depth &amp; Structural Density</span>
+            </h2>
+            <p class="slide-description-text">
+              Engineered with calibrated thickness and high compressive strength to withstand transit while maximizing energy efficiency.
+            </p>
           </div>
         </div>
       </div>
@@ -152,130 +198,12 @@
   </section>
 
   <!-- ==========================================================================
-       4. FLOATING COUNTER BOXES (Exact FarmDung Overlap Style)
-       ========================================================================== -->
-  <section class="section-counter-overlap">
-    <div class="container">
-      <div class="counter-boxes-grid">
-        
-        <div class="pxl-counter-box">
-          <div class="pxl-counter-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </div>
-          <div>
-            <div class="pxl-counter-number"><span class="stat-count" data-target="25">0</span>+</div>
-            <div class="pxl-counter-title">Years Experience</div>
-          </div>
-        </div>
-
-        <div class="pxl-counter-box">
-          <div class="pxl-counter-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          </div>
-          <div>
-            <div class="pxl-counter-number"><span class="stat-count" data-target="100">0</span>%</div>
-            <div class="pxl-counter-title">Quality Assurance</div>
-          </div>
-        </div>
-
-        <div class="pxl-counter-box">
-          <div class="pxl-counter-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          </div>
-          <div>
-            <div class="pxl-counter-number"><span class="stat-count" data-target="48">0</span>+</div>
-            <div class="pxl-counter-title">Export Countries</div>
-          </div>
-        </div>
-
-        <div class="pxl-counter-box">
-          <div class="pxl-counter-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <div>
-            <div class="pxl-counter-number"><span class="stat-count" data-target="1200">0</span>+</div>
-            <div class="pxl-counter-title">Satisfied Clients</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       5. COMPANY PROFILE / ABOUT US (Exact FarmDung Layout)
-       ========================================================================== -->
-  <section class="section-about" id="company-profile">
-    <div class="container">
-      <div class="about-row-container">
-        
-        <!-- Left Image with FarmDung Yellow Award Box -->
-        <div class="about-media-col">
-          <div class="about-main-img-wrap">
-            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=900&q=80" alt="About Anupama Flooring" loading="lazy" />
-          </div>
-          <div class="about-award-box">
-            <div class="award-box-num">25+</div>
-            <div class="award-box-desc">Years of Dedicated Service &amp; Global Export Excellence</div>
-            <div style="font-size: 13px; color: var(--pxl-text-dark); margin-top: 6px; font-weight: 300;">
-              Trusted by clients worldwide for consistent quality, reliable supply, and seamless export services.
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Content Text -->
-        <div class="about-text-col">
-          <div class="pxl-heading">
-            <span class="pxl-heading-subtitle">About Our Company</span>
-            <h2 class="pxl-heading-title">
-              India’s Leading Manufacturer &amp; <span>Global Exporter</span> of Flooring
-            </h2>
-          </div>
-          <div class="pxl-text-editor">
-            <p style="margin-bottom: 14px;">
-              <strong>Anupama Flooring</strong>, a premier unit of ABHI Elite Group Pvt Ltd, is India’s trusted exporter of high-grade natural engineered hardwood, 100% waterproof SPC vinyl planks, and glazed vitrified tiles.
-            </p>
-            <p>
-              We operate advanced manufacturing facilities utilizing German precision profiling lines and Italian UV finishing to guarantee dimensional stability, moisture resilience, and eco-sustainable durability.
-            </p>
-          </div>
-
-          <div class="about-bullet-list">
-            <div class="about-bullet-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>100% Certified Plantation Timber</span>
-            </div>
-            <div class="about-bullet-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Zero VOC &amp; Clean Air Certified</span>
-            </div>
-            <div class="about-bullet-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Export-Grade Pallet Packaging</span>
-            </div>
-            <div class="about-bullet-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>FOB &amp; CIF Global Port Supply</span>
-            </div>
-          </div>
-
-          <button class="pxl-button pxl-btn-primary open-quote-modal">
-            <span>Explore More</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       6. FOUNDER & LEADERSHIP SECTION (Bhavna Aggarwal)
+       4. ABOUT THE FOUNDER (Bhavna Aggarwal)
        ========================================================================== -->
   <section class="section-founder" id="founder">
     <div class="container">
       
-      <div class="pxl-heading text-center" style="margin-bottom: 36px;">
+      <div class="pxl-heading text-center" style="margin-bottom: 32px;">
         <span class="pxl-heading-subtitle">Visionary Leadership</span>
         <h2 class="pxl-heading-title">Meet Our <span>Founder</span></h2>
       </div>
@@ -290,7 +218,7 @@
           <div class="founder-badge-exp">25+ Years Entrepreneurial Leadership</div>
         </div>
 
-        <!-- Right: Exact Biography & Details -->
+        <!-- Right: Biography & Details -->
         <div>
           <h3 class="founder-name-title">Bhavna Aggarwal</h3>
           <span class="founder-role-tag">Founder &bull; Interior Design Specialist &bull; Entrepreneur</span>
@@ -309,228 +237,9 @@
             <span class="founder-pill-tag">&bull; Land Development</span>
             <span class="founder-pill-tag">&bull; Domestic &amp; Global Trade</span>
           </div>
-        </div>
 
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       7. WHY CHOOSE US (Exact FarmDung Staggered Images + 4 Feature Cards)
-       ========================================================================== -->
-  <section class="section-why-choose-us" id="why-choose-us">
-    <div class="container">
-      <div class="why-row-container">
-        
-        <!-- Left Staggered Images + Yellow Badge -->
-        <div class="why-media-mosaic">
-          <div class="why-img-1">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=80" alt="Why Choose Anupama Flooring" loading="lazy" />
-          </div>
-          <div class="why-img-2">
-            <img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=700&q=80" alt="Quality Craftsmanship" loading="lazy" />
-          </div>
-          <div class="why-floating-text-badge">
-            We’re an award winning exporter
-          </div>
-        </div>
-
-        <!-- Right Content & 4 Feature Icon Boxes -->
-        <div>
-          <div class="pxl-heading">
-            <span class="pxl-heading-subtitle">Why Choose Us</span>
-            <h2 class="pxl-heading-title">
-              Delivering Quality, Reliability &amp; <span>Global Trust</span>
-            </h2>
-          </div>
-          <div class="pxl-text-editor">
-            <p style="margin-bottom: 12px;">
-              We stand apart through our commitment to purity, consistency, and customer satisfaction. From ethical raw material sourcing to automated precision profiling and export-grade packaging, every stage of our operations is managed to maintain superior quality standards.
-            </p>
-            <p>
-              With flexible bulk container supply options, custom staining solutions, and complete export documentation support, we make international procurement seamless and hassle-free.
-            </p>
-          </div>
-
-          <!-- 4 Features Grid -->
-          <div class="why-features-grid">
-            
-            <div class="pxl-icon-box-item">
-              <div class="pxl-icon-box-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              </div>
-              <h4 class="pxl-icon-box-title">100% Quality Assured</h4>
-              <p class="pxl-icon-box-description">Certified sustainable raw materials with stringent quality control checks.</p>
-            </div>
-
-            <div class="pxl-icon-box-item">
-              <div class="pxl-icon-box-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-              </div>
-              <h4 class="pxl-icon-box-title">German Precision</h4>
-              <p class="pxl-icon-box-description">HOMAG click-lock profiles ensuring gap-free, waterproof joints.</p>
-            </div>
-
-            <div class="pxl-icon-box-item">
-              <div class="pxl-icon-box-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-              </div>
-              <h4 class="pxl-icon-box-title">Global Maritime Shipping</h4>
-              <p class="pxl-icon-box-description">Rapid dispatch via Mundra and Nhava Sheva ports with complete CIF/FOB terms.</p>
-            </div>
-
-            <div class="pxl-icon-box-item">
-              <div class="pxl-icon-box-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-              </div>
-              <h4 class="pxl-icon-box-title">Dedicated Trade Support</h4>
-              <p class="pxl-icon-box-description">24/7 dedicated account managers assisting with samples and documentation.</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       8. WHAT WE OFFER / PRODUCTS (Exact FarmDung Product Carousel & Cards)
-       ========================================================================== -->
-  <section class="section-products" id="products">
-    <div class="container">
-      
-      <div class="pxl-heading text-center">
-        <span class="pxl-heading-subtitle">What We Offer</span>
-        <h2 class="pxl-heading-title">Our Products</h2>
-      </div>
-
-      <div class="products-grid-layout">
-        
-        <!-- Product 1 -->
-        <div class="pxl-product-card">
-          <div class="pxl-product-thumb">
-            <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=600&q=80" alt="Royal Burmese Teak Plank" loading="lazy" />
-            <div class="pxl-product-actions-bar">
-              <button class="action-icon-btn btn-view-detail" data-product-id="p1" title="Quick View">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path></svg>
-              </button>
-              <button class="action-icon-btn open-quote-modal" title="Inquire Quote">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="pxl-product-content">
-            <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <h6 class="pxl-product-name">Royal Burmese Teak Hardwood</h6>
-            <p class="pxl-product-excerpt">Natural plantation teak planks with cold-pressed oil finish, designed for luxury villas and presidential suites.</p>
-            <button class="pxl-button pxl-btn-primary btn-sm btn-view-detail" data-product-id="p1" style="margin-top: auto;">View Details</button>
-          </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="pxl-product-card">
-          <div class="pxl-product-thumb">
-            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=600&q=80" alt="Nordic Smoked Heritage Oak" loading="lazy" />
-            <div class="pxl-product-actions-bar">
-              <button class="action-icon-btn btn-view-detail" data-product-id="p2" title="Quick View">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path></svg>
-              </button>
-              <button class="action-icon-btn open-quote-modal" title="Inquire Quote">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="pxl-product-content">
-            <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <h6 class="pxl-product-name">Nordic Smoked Heritage Oak</h6>
-            <p class="pxl-product-excerpt">Deep brushed European smoked oak with micro-beveled edges for contemporary minimalist residential interiors.</p>
-            <button class="pxl-button pxl-btn-primary btn-sm btn-view-detail" data-product-id="p2" style="margin-top: auto;">View Details</button>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="pxl-product-card">
-          <div class="pxl-product-thumb">
-            <img src="https://images.unsplash.com/photo-1502005229762-ee1b2da97ba4?auto=format&fit=crop&w=600&q=80" alt="Mineral Stone SPC Vinyl" loading="lazy" />
-            <div class="pxl-product-actions-bar">
-              <button class="action-icon-btn btn-view-detail" data-product-id="p3" title="Quick View">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path></svg>
-              </button>
-              <button class="action-icon-btn open-quote-modal" title="Inquire Quote">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="pxl-product-content">
-            <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <h6 class="pxl-product-name">Mineral Stone Composite (SPC)</h6>
-            <p class="pxl-product-excerpt">100% waterproof rigid limestone core integrated with IXPE acoustic sound insulation underlay.</p>
-            <button class="pxl-button pxl-btn-primary btn-sm btn-view-detail" data-product-id="p3" style="margin-top: auto;">View Details</button>
-          </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="pxl-product-card">
-          <div class="pxl-product-thumb">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Calacatta Earth Vitrified Tile" loading="lazy" />
-            <div class="pxl-product-actions-bar">
-              <button class="action-icon-btn btn-view-detail" data-product-id="p4" title="Quick View">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path></svg>
-              </button>
-              <button class="action-icon-btn open-quote-modal" title="Inquire Quote">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="pxl-product-content">
-            <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <h6 class="pxl-product-name">Calacatta Earth Vitrified Tile</h6>
-            <p class="pxl-product-excerpt">Digital glazed porcelain vitrified tiles with nano-polished stain protection and ultra-low water absorption.</p>
-            <button class="pxl-button pxl-btn-primary btn-sm btn-view-detail" data-product-id="p4" style="margin-top: auto;">View Details</button>
-          </div>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="pxl-product-card">
-          <div class="pxl-product-thumb">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Midnight Emerald Terrazzo" loading="lazy" />
-            <div class="pxl-product-actions-bar">
-              <button class="action-icon-btn btn-view-detail" data-product-id="p5" title="Quick View">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path></svg>
-              </button>
-              <button class="action-icon-btn open-quote-modal" title="Inquire Quote">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="pxl-product-content">
-            <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <h6 class="pxl-product-name">Midnight Emerald Terrazzo</h6>
-            <p class="pxl-product-excerpt">Custom cast composite terrazzo embedding natural jade, quartz, and forest green marble aggregates.</p>
-            <button class="pxl-button pxl-btn-primary btn-sm btn-view-detail" data-product-id="p5" style="margin-top: auto;">View Details</button>
-          </div>
-        </div>
-
-        <!-- Product 6 -->
-        <div class="pxl-product-card">
-          <div class="pxl-product-thumb">
-            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80" alt="Thermotreated Teak Decking" loading="lazy" />
-            <div class="pxl-product-actions-bar">
-              <button class="action-icon-btn btn-view-detail" data-product-id="p6" title="Quick View">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path></svg>
-              </button>
-              <button class="action-icon-btn open-quote-modal" title="Inquire Quote">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-              </button>
-            </div>
-          </div>
-          <div class="pxl-product-content">
-            <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <h6 class="pxl-product-name">Thermotreated Teak Decking</h6>
-            <p class="pxl-product-excerpt">Solid exterior decking planks thermally tempered with steam to resist UV degradation, rot, and termites.</p>
-            <button class="pxl-button pxl-btn-primary btn-sm btn-view-detail" data-product-id="p6" style="margin-top: auto;">View Details</button>
+          <div style="margin-top: 24px;">
+            <a href="company-profile.html" class="pxl-button pxl-btn-primary">Read Full Company Profile</a>
           </div>
         </div>
 
@@ -540,205 +249,7 @@
   </section>
 
   <!-- ==========================================================================
-       9. PARALLAX BANNER (Exact FarmDung Parallax Style)
-       ========================================================================== -->
-  <section class="section-parallax-cta">
-    <div class="container parallax-content">
-      <h2>Trusted Worldwide for Consistent Quality &amp; Reliable Supply</h2>
-      <p>From ethical timber farm sourcing to certified manufacturing and export container shipping, we ensure smooth global delivery.</p>
-      <button class="pxl-button pxl-btn-secondary open-quote-modal">Request Bulk Quote</button>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       10. GALLERY / GLOBAL PORTFOLIO (Exact FarmDung Mosaic Layout)
-       ========================================================================== -->
-  <section class="section-gallery" id="gallery">
-    <div class="container">
-      
-      <div class="pxl-heading text-center">
-        <span class="pxl-heading-subtitle">Our Gallery</span>
-        <h2 class="pxl-heading-title">Recent Projects &amp; Global Installations</h2>
-      </div>
-
-      <div class="gallery-mosaic-grid">
-        
-        <div class="gallery-box-item">
-          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Dubai Villa Installation" loading="lazy" />
-          <div class="gallery-overlay-tag">
-            <h4>Palm Jumeirah Luxury Villa</h4>
-            <p>Burmese Teak Hardwood &bull; Dubai, UAE</p>
-          </div>
-        </div>
-
-        <div class="gallery-box-item">
-          <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=700&q=80" alt="Courtyard Residence" loading="lazy" />
-          <div class="gallery-overlay-tag">
-            <h4>Modern Architectural Courtyard</h4>
-            <p>Stone Polymer SPC &bull; Melbourne, Australia</p>
-          </div>
-        </div>
-
-        <div class="gallery-box-item">
-          <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&w=700&q=80" alt="Kyoto Hotel Project" loading="lazy" />
-          <div class="gallery-overlay-tag">
-            <h4>Zen Wellness Pavilion</h4>
-            <p>Nordic Smoked Oak &bull; Kyoto, Japan</p>
-          </div>
-        </div>
-
-        <div class="gallery-box-item">
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" alt="Lakeside Teak Deck" loading="lazy" />
-          <div class="gallery-overlay-tag">
-            <h4>Lake Como Resort Deck</h4>
-            <p>Exterior Teak Decking &bull; Italy</p>
-          </div>
-        </div>
-
-        <div class="gallery-box-item">
-          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=700&q=80" alt="London Penthouse" loading="lazy" />
-          <div class="gallery-overlay-tag">
-            <h4>Kensington Penthouse</h4>
-            <p>Herringbone Glazed Porcelain &bull; London, UK</p>
-          </div>
-        </div>
-
-        <div class="gallery-box-item">
-          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Singapore Showroom" loading="lazy" />
-          <div class="gallery-overlay-tag">
-            <h4>Artisan Flagship Gallery</h4>
-            <p>Emerald Terrazzo Slabs &bull; Singapore</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       11. CONTACT US SECTION (Exact FarmDung Layout)
-       ========================================================================== -->
-  <section class="section-contact" id="contact-us">
-    <div class="container">
-      
-      <div class="pxl-heading text-center">
-        <span class="pxl-heading-subtitle">Get In Touch</span>
-        <h2 class="pxl-heading-title">Request a Quote &amp; <span>Export Inquiry</span></h2>
-      </div>
-
-      <div class="contact-split-grid">
-        
-        <!-- Left Green Box -->
-        <div class="contact-green-card">
-          <div>
-            <h3 style="font-family: var(--font-heading); font-size: 24px; font-weight: 700; margin-bottom: 8px;">Global Export Office</h3>
-            <p style="font-size: 14px; color: #D1E0CE; line-height: 1.6;">Contact our international export team directly for container pricing, freight schedules, and technical support.</p>
-            
-            <div class="contact-info-list">
-              
-              <div class="contact-info-entry">
-                <div class="contact-entry-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                </div>
-                <div class="contact-entry-text">
-                  <h5>Call &amp; WhatsApp</h5>
-                  <p><a href="tel:+919876543210">+91 98765 43210 / +91 91234 56789</a></p>
-                </div>
-              </div>
-
-              <div class="contact-info-entry">
-                <div class="contact-entry-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </div>
-                <div class="contact-entry-text">
-                  <h5>Email Addresses</h5>
-                  <p><a href="mailto:export@anupamaflooring.com">export@anupamaflooring.com</a></p>
-                  <p><a href="mailto:info@anupamaflooring.com">info@anupamaflooring.com</a></p>
-                </div>
-              </div>
-
-              <div class="contact-info-entry">
-                <div class="contact-entry-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </div>
-                <div class="contact-entry-text">
-                  <h5>Factory &amp; Corporate Office</h5>
-                  <p>Plot No. 42-45, Industrial Surface Zone, GIDC Estate, Morbi-Ahmedabad Highway, Gujarat, India</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div style="margin-top: 30px;">
-            <a href="https://wa.me/919876543210?text=Hello%20Anupama%20Flooring,%20I%20would%20like%20to%20inquire%20about%20your%20flooring%20products" target="_blank" class="pxl-button pxl-btn-secondary" style="width: 100%;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.075-1.077-.07-.294-.096-.677-.22-1.189-.446-2.129-.937-3.523-3.085-3.63-3.228-.106-.143-.86-1.144-.86-2.183 0-1.039.544-1.551.737-1.764.193-.213.421-.266.562-.266.141 0 .282.002.404.008.129.006.302-.049.472.361.174.421.597 1.458.649 1.564.053.107.088.232.018.374-.07.142-.106.232-.211.356-.106.124-.223.277-.318.372-.106.106-.217.221-.093.433.123.212.55 1.07 1.18 1.632.812.723 1.498.948 1.71 1.054.212.106.336.088.46-.053.124-.142.53-.618.671-.83.141-.212.282-.177.476-.106.194.071 1.233.582 1.445.688.212.106.353.159.406.247.052.088.052.512-.092.917z"/></svg>
-              <span>Instant WhatsApp Inquiry</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Farm Form Card -->
-        <div class="contact-form-card">
-          <h4 style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--pxl-dark-green); margin-bottom: 6px;">Send Message</h4>
-          <p style="font-size: 14px; color: var(--pxl-text-body); margin-bottom: 20px;">Please fill out the form below to receive export catalog and wholesale container pricing.</p>
-
-          <form id="rfqForm" class="farm-form-grid">
-            
-            <div class="farm-form-group">
-              <label>Your Name *</label>
-              <input type="text" placeholder="Full Name" required />
-            </div>
-
-            <div class="farm-form-group">
-              <label>Company Name</label>
-              <input type="text" placeholder="Company / Practice" />
-            </div>
-
-            <div class="farm-form-group">
-              <label>Email Address *</label>
-              <input type="email" placeholder="email@domain.com" required />
-            </div>
-
-            <div class="farm-form-group">
-              <label>Phone / WhatsApp *</label>
-              <input type="tel" placeholder="+1 (555) 000-0000" required />
-            </div>
-
-            <div class="farm-form-group full">
-              <label>Product Category *</label>
-              <select required>
-                <option value="Hardwood">Natural Engineered Teak Hardwood</option>
-                <option value="SPC">Luxury SPC Rigid Vinyl Flooring</option>
-                <option value="Vitrified">Glazed Vitrified Porcelain Tiles</option>
-                <option value="Terrazzo">Natural Terrazzo &amp; Quartz Slabs</option>
-                <option value="Decking">Exterior Teak Decking</option>
-              </select>
-            </div>
-
-            <div class="farm-form-group full">
-              <label>Your Message / Quantity</label>
-              <textarea rows="4" placeholder="Enter your requirements, port of discharge, or required area..."></textarea>
-            </div>
-
-            <div class="farm-form-group full">
-              <button type="submit" class="pxl-button pxl-btn-primary" style="width: 100%;">
-                <span>Submit Inquiry</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-
-          </form>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       12. FOOTER (Exact FarmDung Footer Layout)
+       5. FOOTER
        ========================================================================== -->
   <footer class="footer-main">
     <div class="container">
@@ -761,12 +272,12 @@
         <div>
           <h5 class="footer-title-heading">Quick Links</h5>
           <div class="footer-nav-list">
-            <a href="#home">&rsaquo; Home</a>
-            <a href="#company-profile">&rsaquo; Company Profile</a>
-            <a href="#products">&rsaquo; Products</a>
-            <a href="#why-choose-us">&rsaquo; Why Choose us</a>
-            <a href="#gallery">&rsaquo; Gallery</a>
-            <a href="#contact-us">&rsaquo; Contact Us</a>
+            <a href="index.html">&rsaquo; Home</a>
+            <a href="company-profile.html">&rsaquo; Company Profile</a>
+            <a href="products.html">&rsaquo; Products</a>
+            <a href="why-choose-us.html">&rsaquo; Why Choose us</a>
+            <a href="gallery.html">&rsaquo; Gallery</a>
+            <a href="contact-us.html">&rsaquo; Contact Us</a>
           </div>
         </div>
 
@@ -774,12 +285,12 @@
         <div>
           <h5 class="footer-title-heading">Our Products</h5>
           <div class="footer-nav-list">
-            <a href="#products">&rsaquo; Royal Burmese Teak</a>
-            <a href="#products">&rsaquo; Nordic Smoked Oak</a>
-            <a href="#products">&rsaquo; Mineral Stone SPC</a>
-            <a href="#products">&rsaquo; Calacatta Earth Clay</a>
-            <a href="#products">&rsaquo; Midnight Emerald Terrazzo</a>
-            <a href="#products">&rsaquo; Thermotreated Decking</a>
+            <a href="products.html">&rsaquo; Royal Burmese Teak</a>
+            <a href="products.html">&rsaquo; Nordic Smoked Oak</a>
+            <a href="products.html">&rsaquo; Mineral Stone SPC</a>
+            <a href="products.html">&rsaquo; Calacatta Earth Clay</a>
+            <a href="products.html">&rsaquo; Midnight Emerald Terrazzo</a>
+            <a href="products.html">&rsaquo; Thermotreated Decking</a>
           </div>
         </div>
 
@@ -807,63 +318,6 @@
 
     </div>
   </footer>
-
-  <!-- ==========================================================================
-       MODALS
-       ========================================================================== -->
-  
-  <!-- 1. Quote Modal -->
-  <div class="modal-backdrop" id="quoteModal">
-    <div class="modal-card">
-      <button class="modal-close" aria-label="Close">&times;</button>
-      <h3 style="font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--pxl-dark-green); margin-bottom: 6px;">Request an Export Quote</h3>
-      <p style="font-size: 14px; color: var(--pxl-text-body); margin-bottom: 20px;">Get FOB/CIF pallet pricing, product samples, and container shipping schedules.</p>
-      
-      <form id="modalRfqForm" class="farm-form-grid">
-        <div class="farm-form-group">
-          <label>Name *</label>
-          <input type="text" placeholder="Full Name" required />
-        </div>
-        <div class="farm-form-group">
-          <label>Email *</label>
-          <input type="email" placeholder="Email" required />
-        </div>
-        <div class="farm-form-group">
-          <label>Phone / WhatsApp *</label>
-          <input type="tel" placeholder="Phone with country code" required />
-        </div>
-        <div class="farm-form-group">
-          <label>Destination Country *</label>
-          <input type="text" placeholder="Destination Country / Port" required />
-        </div>
-        <div class="farm-form-group full">
-          <button type="submit" class="pxl-button pxl-btn-primary" style="width: 100%;">Submit Request</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- 2. Product Detail Modal -->
-  <div class="modal-backdrop" id="productModal">
-    <div class="modal-card">
-      <button class="modal-close" aria-label="Close">&times;</button>
-      <span id="modalProductCategory" style="font-size: 13px; font-weight: 700; color: var(--pxl-primary); text-transform: uppercase;">Category</span>
-      <h3 id="modalProductTitle" style="font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--pxl-dark-green); margin: 6px 0 12px 0;">Product Name</h3>
-      <p id="modalProductDesc" style="font-size: 14px; color: var(--pxl-text-body); line-height: 1.6; margin-bottom: 18px;">Description</p>
-      
-      <div style="background: var(--pxl-bg-light); border-radius: 8px; padding: 16px; margin-bottom: 20px; border: 1px solid var(--pxl-border); font-size: 13.5px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-          <div><strong>Thickness:</strong> <span id="modalProductThickness"></span></div>
-          <div><strong>Dimensions:</strong> <span id="modalProductSize"></span></div>
-          <div><strong>Surface Finish:</strong> <span id="modalProductFinish"></span></div>
-          <div><strong>Water Rating:</strong> <span id="modalProductWater"></span></div>
-          <div style="grid-column: span 2;"><strong>Applications:</strong> <span id="modalProductApp"></span></div>
-        </div>
-      </div>
-
-      <button class="pxl-button pxl-btn-primary open-quote-modal" style="width: 100%;">Request Bulk Container Quote</button>
-    </div>
-  </div>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>

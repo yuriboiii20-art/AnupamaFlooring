@@ -1,5 +1,5 @@
 /**
- * ANUPAMA FLOORING - FARMDUNGEXPORTER.COM INTERACTIVITY
+ * ANUPAMA FLOORING - MULTI-PAGE & MOBILE INTERACTIVITY
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,84 +10,82 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 });
 
-/* Navbar with Smooth Scroll & Active Spy */
+/* Navbar with Multi-Page Active State & Mobile Menu */
 function initNavbar() {
   const header = document.querySelector('.header-main');
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
   const navLinks = document.querySelectorAll('.main-nav-link');
 
-  // Handle mobile menu
+  // Highlight active link based on current page URL
+  const currentPath = window.location.pathname;
+  const currentPage = currentPath.split('/').pop() || 'index.html';
+
+  navLinks.forEach(link => {
+    const linkHref = link.getAttribute('href');
+    if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    }
+  });
+
+  // Mobile menu open / close & backdrop sync
+  const mobileOverlay = document.getElementById('mobileOverlay');
+
+  function openMobileMenu() {
+    navMenu.classList.add('open');
+    if (mobileOverlay) mobileOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    mobileToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+  }
+
+  function closeMobileMenu() {
+    navMenu.classList.remove('open');
+    if (mobileOverlay) mobileOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+    mobileToggle.innerHTML = `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+  }
+
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      navMenu.classList.toggle('open');
+      if (navMenu.classList.contains('open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
 
+    const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+    if (drawerCloseBtn) {
+      drawerCloseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeMobileMenu();
+      });
+    }
+
+    if (mobileOverlay) {
+      mobileOverlay.addEventListener('click', closeMobileMenu);
+    }
+
     document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('open');
+      if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        closeMobileMenu();
       }
     });
 
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-      });
+      link.addEventListener('click', closeMobileMenu);
     });
   }
 
-  // Header scroll shadow and active spy
+  // Header scroll shadow
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
-    updateActiveNavLink();
-  });
-
-  function updateActiveNavLink() {
-    const sections = document.querySelectorAll('section[id]');
-    const scrollPosition = window.scrollY + 120;
-
-    sections.forEach(sec => {
-      const top = sec.offsetTop;
-      const height = sec.offsetHeight;
-      const id = sec.getAttribute('id');
-      
-      // If we are scrolling in company-profile or founder, keep company-profile active
-      const targetId = (id === 'founder') ? 'company-profile' : id;
-      const matchingLink = document.querySelector(`.main-nav-link[href="#${targetId}"]`);
-
-      if (scrollPosition >= top && scrollPosition < top + height) {
-        if (matchingLink) {
-          navLinks.forEach(link => link.classList.remove('active'));
-          matchingLink.classList.add('active');
-        }
-      }
-    });
-  }
-
-  // Smooth click scroll
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      const targetId = link.getAttribute('href');
-      if (targetId && targetId.startsWith('#')) {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          e.preventDefault();
-          const headerHeight = header.offsetHeight || 88;
-          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight + 5;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-          navLinks.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        }
-      }
-    });
   });
 }
 
@@ -117,7 +115,7 @@ function initHeroSlider() {
   }
 
   function startAutoSlide() {
-    slideInterval = setInterval(nextSlide, 6000);
+    slideInterval = setInterval(nextSlide, 2000); // changes images every 2 seconds
   }
 
   function resetAutoSlide() {
@@ -313,7 +311,7 @@ function initContactForm() {
     submitBtn.disabled = true;
 
     setTimeout(() => {
-      const refId = 'AF-FDE-' + Math.floor(100000 + Math.random() * 900000);
+      const refId = 'AF-EXP-' + Math.floor(100000 + Math.random() * 900000);
       showToast(`Inquiry Received! Ref: #${refId}. Our export team will contact you shortly.`);
       
       formElement.reset();
