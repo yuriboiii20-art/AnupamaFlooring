@@ -1,6 +1,6 @@
 /**
- * ANUPAMA FLOORING - MAIN JAVASCRIPT
- * Interactive functionality, sliders, filters, calculator, and modals.
+ * ANUPAMA FLOORING - NATURAL & ARTISANAL JAVASCRIPT
+ * Interactive sliders, natural material filters, timber area estimator, and RFQ handling.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCompanyTabs();
   initProductFilter();
   initFlooringCalculator();
-  initGalleryFilter();
   initModals();
   initContactForm();
   initBackToTop();
@@ -25,7 +24,6 @@ function initNavbar() {
   const navMenu = document.getElementById('navMenu');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // Sticky Header scroll effect
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
       header.classList.add('scrolled');
@@ -35,19 +33,11 @@ function initNavbar() {
     updateActiveNavLink();
   });
 
-  // Mobile menu toggle
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener('click', () => {
       navMenu.classList.toggle('open');
-      const icon = mobileToggle.querySelector('svg');
-      if (navMenu.classList.contains('open')) {
-        mobileToggle.setAttribute('aria-expanded', 'true');
-      } else {
-        mobileToggle.setAttribute('aria-expanded', 'false');
-      }
     });
 
-    // Close mobile menu on click link
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
@@ -55,7 +45,6 @@ function initNavbar() {
     });
   }
 
-  // Active Nav Link scrollspy
   function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const scrollY = window.pageYOffset + 120;
@@ -108,7 +97,7 @@ function initHeroSlider() {
   }
 
   function startAutoSlide() {
-    slideInterval = setInterval(nextSlide, 6000);
+    slideInterval = setInterval(nextSlide, 7000);
   }
 
   function resetAutoSlide() {
@@ -177,15 +166,15 @@ function initMetricCounters() {
   }
 
   window.addEventListener('scroll', runCounters);
-  runCounters(); // Initial check
+  runCounters();
 }
 
 /* --------------------------------------------------------------------------
    4. COMPANY PROFILE TABS
    -------------------------------------------------------------------------- */
 function initCompanyTabs() {
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabPanes = document.querySelectorAll('.tab-pane');
+  const tabBtns = document.querySelectorAll('.tab-btn, .tab-nav-btn');
+  const tabPanes = document.querySelectorAll('.tab-pane, .tab-panel');
 
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -202,73 +191,73 @@ function initCompanyTabs() {
 }
 
 /* --------------------------------------------------------------------------
-   5. PRODUCT FILTER & QUICK VIEW
+   5. NATURAL MATERIAL FILTER & QUICK VIEW
    -------------------------------------------------------------------------- */
 const productData = {
   'p1': {
-    title: 'Royal Burmese Teak Hardwood',
-    category: 'Engineered Hardwood',
-    desc: 'Crafted from sustainable premium old-growth teak with a multi-ply eucalyptus core for maximum dimensional stability and natural golden-brown patina.',
-    thickness: '15mm (4mm Wear Layer)',
+    title: 'Royal Burmese Teak Plank',
+    category: 'Natural Hardwood',
+    desc: 'Responsibly harvested plantation teak with rich natural oil content, golden-brown grain patina, and eucalyptus cross-ply core.',
+    thickness: '15mm (4mm Natural Wear Layer)',
     size: '1900 x 190 x 15 mm',
-    finish: 'UV Matt Cured Lacquer / Zero VOC',
-    waterResistance: 'High Humidity Resistant',
-    application: 'Luxury Villas, Presidential Suites, Penthouse Living Rooms'
+    finish: 'Cold-Pressed Botanical Linseed Oil',
+    waterResistance: 'Natural Water Repelling Resins',
+    application: 'Living Spaces, Master Bedrooms, Boutique Hospitality'
   },
   'p2': {
-    title: 'Nordic Smoked Oak Plank',
-    category: 'Engineered Hardwood',
-    desc: 'Deep brushed European smoked oak with handcrafted micro-bevels, enhancing the natural warmth and wood grain character of contemporary interiors.',
-    thickness: '14mm (3.5mm Wear Layer)',
+    title: 'Nordic Smoked Heritage Oak',
+    category: 'Natural Hardwood',
+    desc: 'Sustainably sourced European oak naturally fumed to reveal deep growth rings and knots, hand-brushed for tactile organic grain.',
+    thickness: '14mm (3.5mm Natural Wear Layer)',
     size: '1800 x 150 x 14 mm',
-    finish: 'Natural Matte Oil',
-    waterResistance: 'Moisture Sealed Edges',
-    application: 'Executive Boardrooms, Boutique Hotels, Residences'
+    finish: 'Hand-Brushed Organic Wax Oil',
+    waterResistance: 'Wax-Sealed Moisture Edges',
+    application: 'Minimalist Architecture, Dining Rooms, Studios'
   },
   'p3': {
-    title: 'Ultra-Core Stone Polymer Composite (SPC)',
-    category: 'Luxury SPC Vinyl',
-    desc: '100% waterproof rigid core flooring integrated with IXPE acoustic sound insulation underlay. Highly resistant to dents, scratches, and pet traffic.',
-    thickness: '6.5mm (0.55mm Commercial Wear Layer)',
+    title: 'Mineral Stone Composite (SPC)',
+    category: 'Mineral Stone SPC',
+    desc: 'Limestone rock composite bound with virgin polymers and acoustic cork backing. 100% waterproof for kitchens, mudrooms, and pet spaces.',
+    thickness: '6.5mm (0.55mm Commercial Shield)',
     size: '1220 x 180 x 6.5 mm',
-    finish: 'Embossed in Register (EIR) Wood Texture',
-    waterResistance: '100% Fully Waterproof',
-    application: 'Kitchens, Bathrooms, Retail Showrooms, High-Traffic Commercial'
+    finish: 'Embossed in Register (EIR) Organic Wood Touch',
+    waterResistance: '100% Totally Waterproof',
+    application: 'Kitchens, Bathrooms, Entryways, High-Traffic Areas'
   },
   'p4': {
-    title: 'Calacatta Luxe Glazed Vitrified Tile',
-    category: 'Glazed Vitrified Tiles',
-    desc: 'High-definition digital glazed porcelain vitrified tiles replicating Italian Calacatta gold veining with ultra-low water absorption (<0.05%).',
-    thickness: '9mm High Density Ceramic',
-    size: '1200 x 600 mm / 1600 x 800 mm',
-    finish: 'Mirror Polished High Gloss / Satin Silk',
-    waterResistance: 'Impervious to Water & Stains',
-    application: 'Grand Foyers, Airport Lounges, Luxury Bathrooms'
+    title: 'Calacatta Earth Vitrified Tile',
+    category: 'Earth Vitrified Clay',
+    desc: 'Dense kiln-fired porcelain clay with organic Calacatta earth veining and silk-touch stain-proof density.',
+    thickness: '9.5mm Kiln-Fired Porcelain',
+    size: '1200 x 600 mm',
+    finish: 'Satin Silk Non-Reflective Touch',
+    waterResistance: 'Impermeable (<0.05% Absorption)',
+    application: 'Foyers, Modern Bathrooms, Sunrooms'
   },
   'p5': {
-    title: 'Midnight Emerald Terrazzo Slab',
-    category: 'Natural Stone & Terrazzo',
-    desc: 'Custom composite terrazzo embedding natural jade, quartz, and forest green marble chips within a high-strength polymer matrix.',
-    thickness: '18mm Calibrated Slab',
-    size: '600 x 600 mm / Custom Cut-to-Size',
-    finish: 'Honed Matte Anti-Slip',
-    waterResistance: 'Sealed Stain-Proof Surface',
-    application: 'Art Galleries, Luxury Cafes, Designer Boutiques'
+    title: 'Midnight Emerald Terrazzo',
+    category: 'Forest Moss Terrazzo',
+    desc: 'Cast natural stone slabs embedding green jade crystals, quartz, and river pebbles within a high-density cement matrix.',
+    thickness: '18mm Calibrated Stone Slab',
+    size: '600 x 600 mm',
+    finish: 'Honed Matte Anti-Slip (R10)',
+    waterResistance: 'Penetrating Stone Sealed',
+    application: 'Courtyards, Artisan Boutiques, Cafes'
   },
   'p6': {
-    title: 'Thermotreated Exterior Teak Decking',
-    category: 'Outdoor Teak Decking',
-    desc: 'Heavy-duty exterior decking planks thermally modified to resist UV degradation, rot, termites, and harsh maritime climates without chemical preservatives.',
+    title: 'Thermotreated Teak Decking',
+    category: 'Exterior Teak Decking',
+    desc: 'Solid plantation teak thermally tempered with steam heat to prevent weathering, rot, and fungus in wet outdoor climates.',
     thickness: '21mm Solid Teak',
     size: '2400 x 120 x 21 mm',
-    finish: 'Deep Impregnated Teak Oil with Anti-Slip Grooves',
+    finish: 'Deep Teak Oil with Grooved Grip',
     waterResistance: '100% Weather & Marine Proof',
-    application: 'Poolside Decks, Rooftop Terraces, Yacht Docks, Resorts'
+    application: 'Pool Surrounds, Garden Patios, Balconies'
   }
 };
 
 function initProductFilter() {
-  const filterBtns = document.querySelectorAll('.product-filters .filter-btn');
+  const filterBtns = document.querySelectorAll('.product-filter-bar .filter-pill, .product-filters .filter-btn');
   const productCards = document.querySelectorAll('.product-card');
 
   filterBtns.forEach(btn => {
@@ -311,22 +300,20 @@ function initFlooringCalculator() {
   function calculate() {
     const length = parseFloat(lengthInput.value) || 0;
     const width = parseFloat(widthInput.value) || 0;
-    const unit = unitSelect.value;
-    const wastePercent = parseFloat(wasteSelect.value) || 10;
-    const pricePerSqFt = parseFloat(productSelect.value) || 4.50;
+    const unit = unitSelect ? unitSelect.value : 'ft';
+    const wastePercent = parseFloat(wasteSelect ? wasteSelect.value : 10) || 10;
+    const pricePerSqFt = parseFloat(productSelect ? productSelect.value : 5.80) || 5.80;
 
     let baseAreaSqFt = 0;
     if (unit === 'ft') {
       baseAreaSqFt = length * width;
     } else {
-      // Meters to sq ft (1 sq m = 10.7639 sq ft)
       baseAreaSqFt = (length * width) * 10.7639;
     }
 
     const wasteAreaSqFt = baseAreaSqFt * (wastePercent / 100);
     const totalAreaSqFt = baseAreaSqFt + wasteAreaSqFt;
 
-    // Standard box covers ~22 sq ft
     const boxCoverage = 22;
     const boxesNeeded = Math.ceil(totalAreaSqFt / boxCoverage);
     const estimatedCost = totalAreaSqFt * pricePerSqFt;
@@ -345,37 +332,11 @@ function initFlooringCalculator() {
     }
   });
 
-  calculate(); // Run initial estimation
+  calculate();
 }
 
 /* --------------------------------------------------------------------------
-   7. GALLERY FILTER & LIGHTBOX
-   -------------------------------------------------------------------------- */
-function initGalleryFilter() {
-  const filterBtns = document.querySelectorAll('.gallery-filters .filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-
-      galleryItems.forEach(item => {
-        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-          item.style.display = 'block';
-          item.style.animation = 'fadeIn 0.4s ease';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-/* --------------------------------------------------------------------------
-   8. MODALS (Product Details, Quote Modal, Lightbox)
+   7. MODALS
    -------------------------------------------------------------------------- */
 function initModals() {
   const quoteModal = document.getElementById('quoteModal');
@@ -385,7 +346,6 @@ function initModals() {
   const closeBtns = document.querySelectorAll('.modal-close');
   const modalBackdrops = document.querySelectorAll('.modal-backdrop');
 
-  // Open Quote Modal
   openQuoteBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -393,7 +353,6 @@ function initModals() {
     });
   });
 
-  // Open Product Detail Modal
   viewDetailBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const pId = btn.getAttribute('data-product-id');
@@ -413,7 +372,6 @@ function initModals() {
     });
   });
 
-  // Close modals
   closeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       modalBackdrops.forEach(m => m.classList.remove('active'));
@@ -428,7 +386,6 @@ function initModals() {
     });
   });
 
-  // Escape key closes modals
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       modalBackdrops.forEach(m => m.classList.remove('active'));
@@ -437,7 +394,7 @@ function initModals() {
 }
 
 /* --------------------------------------------------------------------------
-   9. CONTACT & RFQ FORM SUBMISSION
+   8. CONTACT & RFQ FORM SUBMISSION
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const rfqForm = document.getElementById('rfqForm');
@@ -452,20 +409,18 @@ function initContactForm() {
       <svg style="animation: spin 1s linear infinite; width:18px; height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
         <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
-      </svg> Submitting Export Inquiry...
+      </svg> Dispatching Swatch Request...
     `;
     submitBtn.disabled = true;
 
-    // Simulate reliable API dispatch
     setTimeout(() => {
-      const refId = 'AF-EXP-' + Math.floor(100000 + Math.random() * 900000);
-      showToast(`Inquiry Received! Reference: #${refId}. Our international export manager will contact you within 4 hours.`);
+      const refId = 'AF-NAT-' + Math.floor(100000 + Math.random() * 900000);
+      showToast(`Inquiry Logged! Ref: #${refId}. Our timber export specialist will reach out shortly.`);
       
       formElement.reset();
       submitBtn.innerHTML = originalText;
       submitBtn.disabled = false;
 
-      // Close modal if submitted inside modal
       const parentModal = formElement.closest('.modal-backdrop');
       if (parentModal) {
         setTimeout(() => parentModal.classList.remove('active'), 1200);
@@ -473,17 +428,12 @@ function initContactForm() {
     }, 1200);
   }
 
-  if (rfqForm) {
-    rfqForm.addEventListener('submit', (e) => handleFormSubmit(e, rfqForm));
-  }
-
-  if (modalRfqForm) {
-    modalRfqForm.addEventListener('submit', (e) => handleFormSubmit(e, modalRfqForm));
-  }
+  if (rfqForm) rfqForm.addEventListener('submit', (e) => handleFormSubmit(e, rfqForm));
+  if (modalRfqForm) modalRfqForm.addEventListener('submit', (e) => handleFormSubmit(e, modalRfqForm));
 }
 
 /* --------------------------------------------------------------------------
-   10. TOAST NOTIFICATION
+   9. TOAST NOTIFICATION
    -------------------------------------------------------------------------- */
 function showToast(message) {
   let toast = document.getElementById('toastNotice');
@@ -495,7 +445,7 @@ function showToast(message) {
   }
 
   toast.innerHTML = `
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#52b788" stroke-width="2">
       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
       <polyline points="22 4 12 14.01 9 11.01"></polyline>
     </svg>
@@ -509,7 +459,7 @@ function showToast(message) {
 }
 
 /* --------------------------------------------------------------------------
-   11. BACK TO TOP BUTTON
+   10. BACK TO TOP BUTTON
    -------------------------------------------------------------------------- */
 function initBackToTop() {
   const topBtn = document.getElementById('backToTop');
