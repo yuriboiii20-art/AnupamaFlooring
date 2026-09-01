@@ -330,7 +330,7 @@ button, input, select, textarea {
 .main-nav-menu {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: clamp(12px, 1.6vw, 22px);
   margin-left: auto;
 }
 
@@ -340,7 +340,7 @@ button, input, select, textarea {
 
 .main-nav-link {
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 600;
   color: var(--pxl-text-dark);
   padding: 8px 0;
@@ -349,7 +349,7 @@ button, input, select, textarea {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
 }
 
 .nav-link-text {
