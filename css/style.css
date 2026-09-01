@@ -2105,36 +2105,36 @@ button, input, select, textarea {
 .founder-home-inner {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
 }
 
 @media (max-width: 768px) {
   .founder-home-card {
-    padding: 20px 16px;
+    padding: 22px 18px;
   }
   .founder-home-inner {
     flex-direction: column;
     text-align: center;
-    gap: 16px;
+    gap: 18px;
   }
 }
 
 .founder-home-img-wrap {
   position: relative;
-  width: 140px;
-  height: 165px;
-  border-radius: 12px;
+  width: 200px;
+  height: 240px;
+  border-radius: 14px;
   overflow: hidden;
   flex-shrink: 0;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  border: 2px solid var(--pxl-primary);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border: 2.5px solid var(--pxl-primary);
   background-color: var(--pxl-bg-light);
 }
 
 @media (max-width: 768px) {
   .founder-home-img-wrap {
-    width: 120px;
-    height: 140px;
+    width: 160px;
+    height: 195px;
     margin: 0 auto;
   }
 }
@@ -2153,11 +2153,11 @@ button, input, select, textarea {
   right: 0;
   background: var(--pxl-dark-green);
   color: var(--pxl-yellow-badge);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
   text-align: center;
-  padding: 3px 4px;
-  letter-spacing: 0.3px;
+  padding: 4px 6px;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
 }
 
