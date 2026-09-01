@@ -181,64 +181,64 @@ function initMetricCounters() {
 /* Product Data & Modals */
 const productData = {
   'p1': {
-    title: 'Royal Burmese Teak Hardwood',
-    category: 'Natural Hardwood',
-    desc: 'Crafted from sustainable premium old-growth teak with a multi-ply eucalyptus core for maximum dimensional stability and natural golden-brown patina.',
-    thickness: '15mm (4mm Wear Layer)',
-    size: '1900 x 190 x 15 mm',
-    finish: 'UV Matt Cured Lacquer / Zero VOC',
-    waterResistance: 'High Humidity Resistant',
-    application: 'Luxury Villas, Presidential Suites, Penthouse Living Rooms'
+    title: 'Sun-Dried Cow Dung Cakes',
+    category: 'Religious Rituals & Bio-Fuel',
+    desc: '100% organic, chemical-free sun-dried cow dung cakes sourced directly from rural farms in India. Handcrafted and sun-cured with moisture control for odorless burning.',
+    thickness: '18 - 22 mm Handcrafted Depth',
+    size: '100 mm (4-Inch) Calibrated Diameter',
+    finish: 'Sun-Cured Natural Porous Surface',
+    waterResistance: '<10% Controlled Moisture Content',
+    application: 'Vedic Havan, Sacred Rituals, Organic Farming, Domestic Clean Fuel'
   },
   'p2': {
-    title: 'Nordic Smoked Heritage Oak',
-    category: 'Natural Hardwood',
-    desc: 'Deep brushed European smoked oak with handcrafted micro-bevels, enhancing the natural warmth and wood grain character of contemporary interiors.',
-    thickness: '14mm (3.5mm Wear Layer)',
-    size: '1800 x 150 x 14 mm',
-    finish: 'Natural Matte Oil',
-    waterResistance: 'Moisture Sealed Edges',
-    application: 'Executive Boardrooms, Boutique Hotels, Residences'
+    title: 'Organic Cow Dung Fertilizer',
+    category: 'Agricultural Bio-Fertilizer',
+    desc: 'Pure organic manure and microbial soil enhancer rich in nitrogen, phosphorus, and potassium. Restores natural soil microbiome and enriches crop yield.',
+    thickness: 'Aerated Compost / Fine Granular',
+    size: 'Bulk 25kg / 50kg Moisture-Proof Sacks',
+    finish: 'Fully Decomposed, Odor-Neutral Compost',
+    waterResistance: '15 - 20% Moisture Stabilized',
+    application: 'Organic Agriculture, Soil Rejuvenation, Horticulture, Greenhouses'
   },
   'p3': {
-    title: 'Mineral Stone Composite (SPC)',
-    category: 'Luxury SPC Vinyl',
-    desc: '100% waterproof rigid core flooring integrated with IXPE acoustic sound insulation underlay. Highly resistant to dents, scratches, and pet traffic.',
-    thickness: '6.5mm (0.55mm Commercial Wear Layer)',
-    size: '1220 x 180 x 6.5 mm',
-    finish: 'Embossed in Register (EIR) Wood Texture',
-    waterResistance: '100% Fully Waterproof',
-    application: 'Kitchens, Bathrooms, Retail Showrooms, High-Traffic Commercial'
+    title: 'Export Master Carton Packaging',
+    category: 'Export-Grade Freight Packaging',
+    desc: 'High-durability 5-ply corrugated export cartons with internal moisture-barrier liners and desiccant protection for long-distance container ocean shipment.',
+    thickness: '5-Ply Heavy Duty Corrugated Fiberboard',
+    size: 'Standard Export Carton (400 x 300 x 250 mm)',
+    finish: 'Moisture-Barrier Poly Sealed',
+    waterResistance: '100% Ocean Humidity Sealed',
+    application: 'FOB / CIF International Ocean Cargo, Global Air Freight Distribution'
   },
   'p4': {
-    title: 'Calacatta Earth Vitrified Tile',
-    category: 'Glazed Vitrified Tiles',
-    desc: 'High-definition digital glazed porcelain vitrified tiles replicating Italian Calacatta gold veining with ultra-low water absorption (<0.05%).',
-    thickness: '9mm High Density Ceramic',
-    size: '1200 x 600 mm',
-    finish: 'Mirror Polished High Gloss / Satin Silk',
-    waterResistance: 'Impervious to Water & Stains',
-    application: 'Grand Foyers, Airport Lounges, Luxury Bathrooms'
+    title: 'Calibrated 4-Inch Sized Cakes',
+    category: 'Precision Calibrated Bioresource',
+    desc: 'Precision-milled and molded to exact international dimensions for uniform burn rate, optimal compressive density, and zero batch-to-batch variation.',
+    thickness: '20 mm Machine-Calibrated Depth',
+    size: '100 mm (4-Inch) Precision Diameter',
+    finish: 'Uniform Calibrated Texture',
+    waterResistance: '<8% Precision Dry Moisture',
+    application: 'Agnihotra Rituals, Incense Formulation, Standardized Clean Heating'
   },
   'p5': {
-    title: 'Midnight Emerald Terrazzo',
-    category: 'Natural Stone & Terrazzo',
-    desc: 'Custom composite terrazzo embedding natural jade, quartz, and forest green marble chips within a high-strength polymer matrix.',
-    thickness: '18mm Calibrated Slab',
-    size: '600 x 600 mm',
-    finish: 'Honed Matte Anti-Slip',
-    waterResistance: 'Sealed Stain-Proof Surface',
-    application: 'Art Galleries, Luxury Cafes, Designer Boutiques'
+    title: 'High-Density Compressed Bio-Cakes',
+    category: 'Renewable Commercial Biofuel',
+    desc: 'High-density compressed bio-cakes engineered with enhanced calorific value to serve as an eco-friendly renewable replacement for fossil fuels.',
+    thickness: '25 mm High-Compacted Profile',
+    size: 'High-Density Briquettes & Pellets',
+    finish: 'Smooth Hydraulic Compressed Finish',
+    waterResistance: '<6% Ultra-Dry Moisture',
+    application: 'Industrial Boilers, Clean Bio-Energy, Commercial Heating, Eco Living'
   },
   'p6': {
-    title: 'Thermotreated Teak Decking',
-    category: 'Outdoor Teak Decking',
-    desc: 'Heavy-duty exterior decking planks thermally modified to resist UV degradation, rot, termites, and harsh maritime climates without chemical preservatives.',
-    thickness: '21mm Solid Teak',
-    size: '2400 x 120 x 21 mm',
-    finish: 'Deep Impregnated Teak Oil with Anti-Slip Grooves',
-    waterResistance: '100% Weather & Marine Proof',
-    application: 'Poolside Decks, Rooftop Terraces, Yacht Docks, Resorts'
+    title: 'Vedic Agnihotra Pure Desi Cow Dung',
+    category: 'Vedic Ritual & Purification Grade',
+    desc: 'Specially prepared from indigenous Indian desi cow dung following Vedic traditions. Clean, odorless, and pure for daily sacred Agnihotra ceremonies.',
+    thickness: '15 - 18 mm Traditional Vedic Cake',
+    size: 'Traditional Round & Square Flat Slices',
+    finish: '100% Pure Indigenous Desi Cow Bio-Cure',
+    waterResistance: 'Zero Chemical Residue / Moisture Tested',
+    application: 'Daily Agnihotra Homa, Vedic Yajna, Atmospheric Air Purification'
   }
 };
 
