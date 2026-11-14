@@ -181,34 +181,34 @@ function initMetricCounters() {
 /* Product Data & Modals */
 const productData = {
   'p1': {
-    title: 'Sun-Dried Cow Dung Cakes',
-    category: 'Religious Rituals & Bio-Fuel',
-    desc: '100% organic, chemical-free sun-dried cow dung cakes sourced directly from rural farms in India. Handcrafted and sun-cured with moisture control for odorless burning.',
-    thickness: '18 - 22 mm Handcrafted Depth',
-    size: '100 mm (4-Inch) Calibrated Diameter',
-    finish: 'Sun-Cured Natural Porous Surface',
-    waterResistance: '<10% Controlled Moisture Content',
-    application: 'Vedic Havan, Sacred Rituals, Organic Farming, Domestic Clean Fuel'
+    title: 'Organic Cow Dung Cakes (fertilizer grade)',
+    category: 'Fertilizer Grade & Organic Agriculture',
+    desc: 'Made from farm-sourced cow dung, shaped into uniform cakes and dried in open sunlight. They contain no chemicals or additives. Crush them into soil, add them to compost, or soak them to make a liquid feed.',
+    thickness: 'Uniform Handcrafted Depth',
+    size: 'Round, flat cakes ([_ cm] diameter)',
+    finish: 'Sun-dried in open sunlight & quality-inspected',
+    waterResistance: '[below _ %] thoroughly sun-dried',
+    application: 'Crush into soil, add to compost, or soak to make a liquid feed'
   },
   'p2': {
-    title: 'Organic Cow Dung Fertilizer',
-    category: 'Agricultural Bio-Fertilizer',
-    desc: 'Pure organic manure and microbial soil enhancer rich in nitrogen, phosphorus, and potassium. Restores natural soil microbiome and enriches crop yield.',
-    thickness: 'Aerated Compost / Fine Granular',
-    size: 'Bulk 25kg / 50kg Moisture-Proof Sacks',
-    finish: 'Fully Decomposed, Odor-Neutral Compost',
-    waterResistance: '15 - 20% Moisture Stabilized',
-    application: 'Organic Agriculture, Soil Rejuvenation, Horticulture, Greenhouses'
+    title: 'Cow Dung Powder',
+    category: 'Finely Ground Soil Conditioner',
+    desc: 'The same sun-dried product, finely ground for easy, even mixing into soil and potting blends.',
+    thickness: 'Fine granular powder',
+    size: '[_ kg bags / cartons; private label available]',
+    finish: 'Finely milled and screened',
+    waterResistance: 'Controlled safe moisture level',
+    application: 'Easy, even mixing into soil and potting blends, nurseries, orchards'
   },
   'p3': {
-    title: 'Export Master Carton Packaging',
-    category: 'Export-Grade Freight Packaging',
-    desc: 'High-durability 5-ply corrugated export cartons with internal moisture-barrier liners and desiccant protection for long-distance container ocean shipment.',
-    thickness: '5-Ply Heavy Duty Corrugated Fiberboard',
-    size: 'Standard Export Carton (400 x 300 x 250 mm)',
-    finish: 'Moisture-Barrier Poly Sealed',
-    waterResistance: '100% Ocean Humidity Sealed',
-    application: 'FOB / CIF International Ocean Cargo, Global Air Freight Distribution'
+    title: 'Cow Dung Herbal Compost',
+    category: 'Herbal-Enriched Soil Bioresource',
+    desc: 'Cow dung composted with herbal inputs to improve soil conditions and plant growth.',
+    thickness: 'Fully matured organic compost',
+    size: '[_ kg bags / cartons; private label available]',
+    finish: 'Herbal-composted and aged',
+    waterResistance: 'Moisture-stabilized microbial compost',
+    application: 'Rebuild soil structure, enhance microbial life, stimulate root growth'
   },
   'p4': {
     title: 'Calibrated 4-Inch Sized Cakes',
@@ -221,14 +221,14 @@ const productData = {
     application: 'Agnihotra Rituals, Incense Formulation, Standardized Clean Heating'
   },
   'p5': {
-    title: 'High-Density Compressed Bio-Cakes',
-    category: 'Renewable Commercial Biofuel',
-    desc: 'High-density compressed bio-cakes engineered with enhanced calorific value to serve as an eco-friendly renewable replacement for fossil fuels.',
-    thickness: '25 mm High-Compacted Profile',
-    size: 'High-Density Briquettes & Pellets',
-    finish: 'Smooth Hydraulic Compressed Finish',
-    waterResistance: '<6% Ultra-Dry Moisture',
-    application: 'Industrial Boilers, Clean Bio-Energy, Commercial Heating, Eco Living'
+    title: 'Export Master Carton & Moisture Bags',
+    category: 'Export-Grade Freight Packaging',
+    desc: 'Moisture-resistant bags and heavy-duty 5-ply cartons engineered for container ocean freight protection; custom packing and private label available.',
+    thickness: '5-Ply Heavy Duty Corrugated Fiberboard',
+    size: 'Standard Export Carton & Moisture-Resistant Bags',
+    finish: 'Moisture-Barrier Poly Sealed',
+    waterResistance: '100% Ocean Humidity Sealed',
+    application: 'FOB / CIF International Ocean Cargo, Global Container Distribution'
   },
   'p6': {
     title: 'Vedic Agnihotra Pure Desi Cow Dung',
